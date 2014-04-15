@@ -9,6 +9,8 @@ for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
 done
 unset file
 
+PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
+
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
 
