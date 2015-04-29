@@ -42,3 +42,13 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 
 # If possible, add tab completion for many more commands
 [ -f /etc/bash_completion ] && source /etc/bash_completion
+
+code () {
+    if [[ $# = 0 ]]
+    then
+        open -a "Visual Studio Code"
+    else
+        [[ $1 = /* ]] && F="$1" || F="$PWD/${1#./}"
+        open -a "Visual Studio Code" --args "$F"
+    fi
+}
