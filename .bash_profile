@@ -52,3 +52,4 @@ code () {
         open -a "Visual Studio Code" --args "$F"
     fi
 }
+
